@@ -3,250 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Noor Traders | Premium Herbal Hair Care in Layyah</title>
+    <title>Al Noor Traders | Premium Herbal Hair Care</title>
     <meta name="description" content="Premium herbal oils and hair tonics from Al Noor Traders, Layyah. Discover Nine Leaves Herbal Oil and Black Rose Hair Tonic.">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Alpine.js for Interactivity -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f5f5f0;
-            scroll-behavior: smooth;
-        }
-        .font-serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .brand-green { color: #2d4a22; }
-        .bg-brand-green { background-color: #2d4a22; }
-        .brand-olive { color: #5a5a40; }
-        .bg-brand-olive { background-color: #5a5a40; }
-        .bg-brand-cream { background-color: #f5f5f0; }
-        
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .accordion-content.active {
-            max-height: 2000px;
-        }
-    </style>
-</head>
-<body class="text-gray-900">
-
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-[#f5f5f0]/80 backdrop-blur-md border-b border-[#5a5a40]/10">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center text-white font-serif font-bold">A</div>
-                <span class="font-serif text-xl font-bold tracking-tight brand-green">Al Noor Traders</span>
-            </div>
-            <a href="https://wa.me/923338919195" class="flex items-center gap-2 bg-brand-green text-white px-4 py-2 rounded-full text-sm font-medium">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-                <span>Contact</span>
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative py-16 lg:py-24 overflow-hidden px-4">
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="max-w-3xl">
-                <span class="inline-block px-3 py-1 rounded-full bg-[#5a5a40]/10 brand-olive text-xs font-semibold uppercase mb-6">Premium Hair Care</span>
-                <h1 class="font-serif text-5xl lg:text-7xl font-bold brand-green leading-tight mb-6">
-                    Natural Secret to <br>
-                    <span class="italic brand-olive">Stronger, Silkier</span> Hair
-                </h1>
-                <p class="text-lg text-gray-600 mb-10 max-w-xl">Discover the power of nature with Al Noor Traders. Crafted in Layyah to give your hair the nourishment it deserves.</p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#order" class="flex items-center justify-center gap-3 bg-brand-green text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl">
-                        <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        Order via WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Showcase -->
-    <section id="products" class="py-20 bg-white px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="font-serif text-4xl text-center font-bold brand-green mb-12">Our Signature Collection</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-brand-cream rounded-3xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
-                    <img src="https://i.ibb.co/p6dMrbNq/Screenshot-20260408-224946.png" class="md:w-2/5 object-cover h-64 md:h-auto" alt="Nine Leaves Oil">
-                    <div class="p-8 md:w-3/5 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-serif text-2xl font-bold brand-green mb-2">Nine Leaves Herbal Oil</h3>
-                            <p class="text-gray-600 text-sm mb-4">Advanced thickening and growth formula.</p>
-                            <div class="space-y-2 mb-6">
-                                <div class="flex justify-between bg-white p-2 rounded-lg text-sm"><span>100ml</span><b>Rs 500</b></div>
-                                <div class="flex justify-between bg-white p-2 rounded-lg text-sm"><span>200ml</span><b>Rs 1000</b></div>
-                            </div>
-                        </div>
-                        <a href="#order" class="w-full bg-brand-green text-white py-3 rounded-xl font-bold text-center">Buy Now</a>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="bg-brand-cream rounded-3xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
-                    <img src="https://i.ibb.co/jkKRfv4d/Screenshot-20260408-224652.png" class="md:w-2/5 object-cover h-64 md:h-auto" alt="Black Rose Tonic">
-                    <div class="p-8 md:w-3/5 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-serif text-2xl font-bold brand-green mb-2">Black Rose Hair Tonic</h3>
-                            <p class="text-gray-600 text-sm mb-4">Frizz-free perfection with silk protein.</p>
-                            <div class="bg-white p-2 rounded-lg text-sm mb-6 flex justify-between"><span>190ml</span><b>Rs 800</b></div>
-                        </div>
-                        <a href="#order" class="w-full bg-brand-green text-white py-3 rounded-xl font-bold text-center">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deep Dive Accordion -->
-    <section class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="font-serif text-3xl text-center font-bold brand-green mb-10">Benefits & Usage</h2>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-serif: "Cormorant Garamond", serif;
+            --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
             
-            <!-- Accordion 1 -->
-            <div class="mb-4 border border-gray-200 rounded-2xl overflow-hidden bg-white">
-                <button onclick="toggleAccordion('nine-leaves')" class="w-full p-6 flex justify-between items-center bg-gray-50">
-                    <span class="font-serif text-xl font-bold brand-green">Nine Leaves Herbal Oil Details</span>
-                    <i data-lucide="chevron-down" id="icon-nine-leaves"></i>
-                </button>
-                <div id="nine-leaves" class="accordion-content p-6 space-y-4">
-                    <p class="text-gray-600">A blend of traditional ingredients for repair and growth.</p>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 brand-olive"></i> Growth: Mustard & Brahmi</li>
-                        <li class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 brand-olive"></i> Dandruff: Neem & Aloe</li>
-                        <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 brand-olive"></i> Shine: Argan & Henna</li>
-                        <li class="flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4 brand-olive"></i> Strength: Amla & Shikakai</li>
-                    </ul>
-                    <div class="bg-green-50 p-4 rounded-xl border border-green-100">
-                        <p class="font-bold brand-green mb-2">How to Apply:</p>
-                        <p class="text-xs text-gray-600">Warm oil → Massage scalp (15m) → Leave overnight → Wash.</p>
-                    </div>
-                </div>
-            </div>
+            --color-brand-green: #2d4a22;
+            --color-brand-olive: #5a5a40;
+            --color-brand-cream: #f5f5f0;
+        }
 
-            <!-- Accordion 2 -->
-            <div class="border border-gray-200 rounded-2xl overflow-hidden bg-white">
-                <button onclick="toggleAccordion('black-rose')" class="w-full p-6 flex justify-between items-center bg-gray-50">
-                    <span class="font-serif text-xl font-bold brand-green">Black Rose Hair Tonic Details</span>
-                    <i data-lucide="chevron-down" id="icon-black-rose"></i>
-                </button>
-                <div id="black-rose" class="accordion-content p-6 space-y-4">
-                    <p class="text-gray-600">Weightless fiber silicon technology to smooth 100% roughness.</p>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="sun" class="w-4 h-4 brand-olive"></i> Heat Protection from styling</li>
-                        <li class="flex items-center gap-2"><i data-lucide="thermometer" class="w-4 h-4 brand-olive"></i> Ideal for chemical treatments</li>
-                        <li class="flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 brand-olive"></i> Glossy Finish with Vitamin E</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Form -->
-    <section id="order" class="py-20 bg-brand-cream px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-gray-100">
-                <h2 class="font-serif text-3xl font-bold brand-green mb-4">Place Your Order</h2>
-                <p class="text-brand-olive text-sm mb-8 bg-brand-olive/5 p-3 rounded-lg">Delivery: This will also be used as your billing address.</p>
-                
-                <form onsubmit="sendOrder(event)" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" id="name" placeholder="Full Name" required class="w-full p-4 rounded-2xl border-2 border-gray-100 focus:border-brand-green outline-none">
-                        <input type="tel" id="phone" placeholder="Phone Number" required class="w-full p-4 rounded-2xl border-2 border-gray-100 focus:border-brand-green outline-none">
-                    </div>
-                    <select id="product" class="w-full p-4 rounded-2xl border-2 border-gray-100 focus:border-brand-green outline-none bg-white">
-                        <option value="Nine Leaves Herbal Oil (100ml)">Nine Leaves Herbal Oil (100ml) - Rs 500</option>
-                        <option value="Nine Leaves Herbal Oil (200ml)">Nine Leaves Herbal Oil (200ml) - Rs 1000</option>
-                        <option value="Black Rose Hair Tonic (190ml)">Black Rose Hair Tonic (190ml) - Rs 800</option>
-                    </select>
-                    <textarea id="address" placeholder="Complete Delivery Address" required rows="3" class="w-full p-4 rounded-2xl border-2 border-gray-100 focus:border-brand-green outline-none resize-none"></textarea>
-                    
-                    <button type="submit" class="w-full bg-brand-green text-white py-5 rounded-3xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl">
-                        <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        Order via WhatsApp
-                    </button>
-                </form>
-            </div>
-
-            <!-- Delivery Info -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                <div class="bg-white p-6 rounded-3xl border border-gray-100 text-center">
-                    <i data-lucide="truck" class="w-6 h-6 mx-auto brand-green mb-2"></i>
-                    <p class="font-bold text-sm">Fast Shipping</p>
-                    <p class="text-xs text-gray-500">2-4 Working Days</p>
-                </div>
-                <div class="bg-white p-6 rounded-3xl border border-gray-100 text-center">
-                    <i data-lucide="wallet" class="w-6 h-6 mx-auto brand-green mb-2"></i>
-                    <p class="font-bold text-sm">Cash on Delivery</p>
-                    <p class="text-xs text-gray-500">Pay when you receive</p>
-                </div>
-                <div class="bg-white p-6 rounded-3xl border border-gray-100 text-center">
-                    <i data-lucide="clock" class="w-6 h-6 mx-auto brand-green mb-2"></i>
-                    <p class="font-bold text-sm">Order Tracking</p>
-                    <p class="text-xs text-gray-500">Updates via WhatsApp</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-brand-green text-white/70 py-12 px-4 text-center">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="font-serif text-2xl font-bold text-white mb-4">Al Noor Traders</h2>
-            <p class="text-sm mb-6">Main Rd, Layyah | 0333 8919195</p>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://www.facebook.com/share/1Xr6L8Y3i4/"><i data-lucide="facebook"></i></a>
-                <a href="https://www.youtube.com/@alnoortradersly"><i data-lucide="youtube"></i></a>
-            </div>
-            <p class="text-xs">© 2026 Al Noor Traders. Dispatched from Layyah.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Accordion Logic
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById('icon-' + id);
-            const isActive = content.classList.contains('active');
-            
-            // Close all
-            document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('active'));
-            
-            if (!isActive) {
-                content.classList.add('active');
+        @layer base {
+            body {
+                @apply bg-brand-cream text-gray-900 font-sans antialiased;
             }
         }
 
-        // WhatsApp Order Logic
-        function sendOrder(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const product = document.getElementById('product').value;
-            const address = document.getElementById('address').value;
-            
-            const message = `New Order!\nName: ${name}\nAddress: ${address}\nPhone: ${phone}\nProduct: ${product}`;
-            const whatsappUrl = `https://wa.me/923338919195?text=${encodeURIComponent(message)}`;
-            
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
-</body>
-</html>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body x-data="appData()">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-olive/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center text-white font-serif font-bold">A</div>
+                <span class="font-serif text-xl font-bold tracking-tight text-brand-green">Al Noor Traders</span>
+            </div>
+            <button 
+                @click="openWhatsApp()"
+                class="flex items-center gap-2 bg-brand-green text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all"
+            >
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">Contact Us</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 lg:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <div 
+                        x-init="setTimeout(() => $el.classList.add('opacity-100', 'translate-y-0'), 100)"
+                        class="opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+                    >
+                        <span class="inline-block px-3 py-1 rounded-full bg-brand-olive/10 text-brand-olive text-xs font-semibold tracking-wider uppercase mb-6">
+                            Premium Hair Care Solutions
+                        </span>
+                        <h1 class="font-serif text-5xl lg:text-7xl font-bold text-brand-green leading-[1.1] mb-8">
+                            Natural Secret to <br />
+                            <span class="italic text-brand-olive">Stronger, Silkier</span> Hair
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
+                            Discover the power of nature with Al Noor Traders. Our herbal oils and tonics are crafted in Layyah to give your hair the nourishment it deserves.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                @click="openWhatsApp('Hello Al Noor Traders, I\'m interested in your hair care products.')"
+                                class="flex items-center justify-center gap-3 bg-brand-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:-translate-y-1 transition-all group"
+                            >
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                                Order via WhatsApp
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            <a 
+                                href="#products"
+                                class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-lg font-semibold text-brand-green border border-brand-green/20 hover:bg-brand-green/5 transition-all"
+                            >
+               
